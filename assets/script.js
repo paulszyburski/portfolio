@@ -161,6 +161,20 @@ function hydrateAiImages(root = document) {
 }
 hydrateAiImages();
 
+// Autonomous robot image hydration
+const roboticsSourceImages = new Map(
+  [...document.querySelectorAll('[data-robotics-source]')].map(image => [image.dataset.roboticsSource, image.currentSrc || image.src])
+);
+
+function hydrateRoboticsImages(root = document) {
+  root.querySelectorAll('[data-robotics-card-shot], [data-robotics-detail-shot]').forEach(image => {
+    const key = image.dataset.roboticsCardShot || image.dataset.roboticsDetailShot;
+    const source = roboticsSourceImages.get(key);
+    if (source && !image.src) image.src = source;
+  });
+}
+hydrateRoboticsImages();
+
 // Reptra image hydration and card carousel
 const reptraSourceImages = new Map(
   [...document.querySelectorAll('[data-reptra-source]')].map(image => [image.dataset.reptraSource, image.currentSrc || image.src])
@@ -341,7 +355,7 @@ function closeGoldbridgeDetailUi() {
   if (!goldbridgeDetail || !goldbridgeDetail.classList.contains('open')) return;
   goldbridgeDetail.classList.remove('open');
   goldbridgeDetail.setAttribute('aria-hidden', 'true');
-  if (!reptraDetail?.classList.contains('open') && !parkingDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
+  if (!reptraDetail?.classList.contains('open') && !parkingDetail?.classList.contains('open') && !roboticsDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
   projectDetailReturnFocus?.focus?.();
 }
 
@@ -370,7 +384,7 @@ function closeReptraDetailUi() {
   if (!reptraDetail || !reptraDetail.classList.contains('open')) return;
   reptraDetail.classList.remove('open');
   reptraDetail.setAttribute('aria-hidden', 'true');
-  if (!goldbridgeDetail?.classList.contains('open') && !parkingDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
+  if (!goldbridgeDetail?.classList.contains('open') && !parkingDetail?.classList.contains('open') && !roboticsDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
   reptraDetailReturnFocus?.focus?.();
 }
 
@@ -441,7 +455,7 @@ function closeParkingDetailUi() {
   if (!parkingDetail || !parkingDetail.classList.contains('open')) return;
   parkingDetail.classList.remove('open');
   parkingDetail.setAttribute('aria-hidden', 'true');
-  if (!goldbridgeDetail?.classList.contains('open') && !reptraDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
+  if (!goldbridgeDetail?.classList.contains('open') && !reptraDetail?.classList.contains('open') && !roboticsDetail?.classList.contains('open')) document.body.classList.remove('project-detail-open');
   parkingDetailReturnFocus?.focus?.();
 }
 
@@ -482,23 +496,105 @@ closeParkingLinks.forEach(link => link.addEventListener('click', () => {
 }));
 parkingDetailThemeToggle?.addEventListener('click', () => themeToggle?.click());
 
+
+const roboticsProjectCard = document.querySelector('[data-project-card="robotics-car"]');
+const roboticsDetail = document.querySelector('[data-project-detail="robotics-car"]');
+const roboticsDetailScroll = document.querySelector('[data-robotics-detail-scroll]');
+const openRoboticsButtons = document.querySelectorAll('[data-open-robotics-detail]');
+const closeRoboticsButtons = document.querySelectorAll('[data-close-robotics-detail]');
+const closeRoboticsLinks = document.querySelectorAll('[data-close-robotics-link]');
+const roboticsDetailThemeToggle = document.querySelector('.robotics-detail-theme-toggle');
+let roboticsDetailReturnFocus = null;
+
+function openRoboticsDetailUi(returnFocus = roboticsProjectCard) {
+  if (!roboticsDetail) return;
+  roboticsDetailReturnFocus = returnFocus;
+  hydrateRoboticsImages(roboticsDetail);
+  roboticsDetail.classList.add('open');
+  roboticsDetail.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('project-detail-open');
+  if (roboticsDetailScroll) roboticsDetailScroll.scrollTop = 0;
+  requestAnimationFrame(() => roboticsDetail.querySelector('[data-close-robotics-detail]')?.focus());
+}
+
+function closeRoboticsDetailUi() {
+  if (!roboticsDetail || !roboticsDetail.classList.contains('open')) return;
+  roboticsDetail.classList.remove('open');
+  roboticsDetail.setAttribute('aria-hidden', 'true');
+  if (!goldbridgeDetail?.classList.contains('open') && !reptraDetail?.classList.contains('open') && !parkingDetail?.classList.contains('open')) {
+    document.body.classList.remove('project-detail-open');
+  }
+  roboticsDetailReturnFocus?.focus?.();
+}
+
+function navigateToRoboticsDetail(trigger) {
+  roboticsDetailReturnFocus = trigger || roboticsProjectCard;
+  if (window.location.hash !== '#project/robotics-car') {
+    history.pushState({ project: 'robotics-car' }, '', '#project/robotics-car');
+  }
+  openRoboticsDetailUi(roboticsDetailReturnFocus);
+}
+
+function navigateBackFromRobotics() {
+  if (history.state?.project === 'robotics-car') {
+    history.back();
+  } else {
+    history.replaceState(null, '', `${location.pathname}${location.search}`);
+    closeRoboticsDetailUi();
+  }
+}
+
+openRoboticsButtons.forEach(button => button.addEventListener('click', event => {
+  event.stopPropagation();
+  navigateToRoboticsDetail(button);
+}));
+
+if (roboticsProjectCard) {
+  roboticsProjectCard.addEventListener('click', event => {
+    if (event.target.closest('button, a')) return;
+    navigateToRoboticsDetail(roboticsProjectCard);
+  });
+  roboticsProjectCard.addEventListener('keydown', event => {
+    if ((event.key === 'Enter' || event.key === ' ') && event.target === roboticsProjectCard) {
+      event.preventDefault();
+      navigateToRoboticsDetail(roboticsProjectCard);
+    }
+  });
+}
+
+closeRoboticsButtons.forEach(button => button.addEventListener('click', navigateBackFromRobotics));
+closeRoboticsLinks.forEach(link => link.addEventListener('click', () => {
+  history.replaceState(null, '', `${location.pathname}${location.search}#top`);
+  closeRoboticsDetailUi();
+}));
+roboticsDetailThemeToggle?.addEventListener('click', () => themeToggle?.click());
+
 function renderProjectRoute() {
   if (window.location.hash === '#project/goldbridge') {
     closeReptraDetailUi();
     closeParkingDetailUi();
+    closeRoboticsDetailUi();
     openGoldbridgeDetailUi();
   } else if (window.location.hash === '#project/reptra') {
     closeGoldbridgeDetailUi();
     closeParkingDetailUi();
+    closeRoboticsDetailUi();
     openReptraDetailUi();
   } else if (window.location.hash === '#project/parking-ai') {
     closeGoldbridgeDetailUi();
     closeReptraDetailUi();
+    closeRoboticsDetailUi();
     openParkingDetailUi();
+  } else if (window.location.hash === '#project/robotics-car') {
+    closeGoldbridgeDetailUi();
+    closeReptraDetailUi();
+    closeParkingDetailUi();
+    openRoboticsDetailUi();
   } else {
     closeGoldbridgeDetailUi();
     closeReptraDetailUi();
     closeParkingDetailUi();
+    closeRoboticsDetailUi();
   }
 }
 
@@ -598,6 +694,8 @@ window.addEventListener('keydown', event => {
     navigateBackFromReptra();
   } else if (event.key === 'Escape' && parkingDetail?.classList.contains('open') && !lightbox?.classList.contains('open')) {
     navigateBackFromParking();
+  } else if (event.key === 'Escape' && roboticsDetail?.classList.contains('open') && !lightbox?.classList.contains('open')) {
+    navigateBackFromRobotics();
   }
 });
 
