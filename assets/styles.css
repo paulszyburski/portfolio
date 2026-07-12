@@ -1954,3 +1954,408 @@ body.project-detail-open { overflow: hidden; }
     min-height: 0;
   }
 }
+
+
+/* Autonomous parking robot project */
+.media-robotics {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  min-height: 0;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 18% 15%, rgba(82, 229, 181, .2), transparent 35%),
+    radial-gradient(circle at 84% 76%, rgba(69, 212, 255, .18), transparent 35%),
+    linear-gradient(145deg, #10161a, #071011);
+}
+.robotics-source-bank {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.robotics-card-collage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  isolation: isolate;
+}
+.robotics-card-collage::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82, 229, 181, .22), transparent 70%);
+  filter: blur(22px);
+}
+.robotics-card-badge {
+  position: absolute;
+  z-index: 8;
+  top: 1px;
+  left: 1px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(5, 12, 12, .72);
+  backdrop-filter: blur(14px);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.robotics-card-badge i,
+.detail-progress-pill i,
+.robotics-float-label i {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #52e5b5;
+  box-shadow: 0 0 13px rgba(82, 229, 181, .85);
+}
+.robotics-card-shot {
+  position: absolute;
+  overflow: hidden;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 19px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .28), rgba(255, 255, 255, .04));
+  box-shadow: 0 24px 55px rgba(0, 0, 0, .45);
+  cursor: zoom-in;
+  transition: transform .38s cubic-bezier(.2, .8, .2, 1), filter .25s ease;
+}
+.robotics-card-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  background: #080c0d;
+}
+.robotics-card-shot.primary {
+  inset: 16% 7% 7% 2%;
+  z-index: 1;
+  transform: rotate(-2deg);
+}
+.robotics-card-shot.secondary-a {
+  width: 43%;
+  height: 40%;
+  right: 0;
+  top: 9%;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+.robotics-card-shot.secondary-b {
+  width: 43%;
+  height: 38%;
+  right: 2%;
+  bottom: 2%;
+  z-index: 4;
+  transform: rotate(-4deg);
+}
+.robotics-card-shot.primary img { object-position: 50% 53%; }
+.robotics-card-shot.secondary-a img { object-position: 50% 55%; }
+.robotics-card-shot.secondary-b img { object-position: 50% 48%; }
+.robotics-card-shot:hover { z-index: 7; filter: saturate(1.08); }
+.robotics-card-shot.primary:hover { transform: rotate(0) translateY(-5px); }
+.robotics-card-shot.secondary-a:hover { transform: rotate(1deg) translateY(-5px); }
+.robotics-card-shot.secondary-b:hover { transform: rotate(-1deg) translateY(-5px); }
+.robotics-progress-note {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, #52e5b5 28%, var(--line));
+  border-radius: 16px;
+  background: color-mix(in srgb, #52e5b5 7%, var(--surface-strong));
+  color: var(--text-soft);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+.robotics-progress-note strong {
+  color: var(--text);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-detail-screen.robotics-detail {
+  background:
+    radial-gradient(circle at 10% 7%, rgba(82, 229, 181, .17), transparent 29%),
+    radial-gradient(circle at 90% 29%, rgba(69, 212, 255, .14), transparent 28%),
+    var(--bg);
+}
+.robotics-detail .detail-kicker i {
+  background: #52e5b5;
+  box-shadow: 0 0 14px rgba(82, 229, 181, .75);
+}
+.robotics-detail .detail-status i {
+  background: #45d4ff;
+  box-shadow: 0 0 14px rgba(69, 212, 255, .72);
+}
+.detail-progress-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  color: var(--text);
+  background: var(--surface);
+  font-size: .76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.robotics-detail-visual {
+  position: relative;
+  min-height: 650px;
+  isolation: isolate;
+}
+.robotics-detail-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82, 229, 181, .18), transparent 68%);
+  filter: blur(24px);
+}
+.robotics-detail-shot {
+  position: absolute;
+  overflow: hidden;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 25px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .34), rgba(255, 255, 255, .05));
+  box-shadow: 0 40px 90px rgba(0, 0, 0, .5);
+  cursor: zoom-in;
+  transition: transform .42s cubic-bezier(.2, .8, .2, 1), filter .3s ease;
+}
+.robotics-detail-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  background: #080c0d;
+}
+.robotics-detail-shot.main {
+  inset: 6% 2% 25% 3%;
+  z-index: 1;
+  transform: rotate(-2deg);
+}
+.robotics-detail-shot.main img { object-position: 50% 54%; }
+.robotics-detail-shot.code {
+  width: 47%;
+  height: 40%;
+  right: -1%;
+  bottom: 1%;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+.robotics-detail-shot.code img { object-position: 50% 55%; }
+.robotics-detail-shot.electronics {
+  width: 50%;
+  height: 37%;
+  left: -1%;
+  bottom: 0;
+  z-index: 2;
+  transform: rotate(-6deg);
+}
+.robotics-detail-shot.electronics img { object-position: 50% 48%; }
+.robotics-detail-shot:hover { z-index: 6; filter: saturate(1.08); }
+.robotics-detail-shot.main:hover { transform: rotate(0) translateY(-8px); }
+.robotics-detail-shot.code:hover { transform: rotate(2deg) translate(3px, -8px); }
+.robotics-detail-shot.electronics:hover { transform: rotate(-2deg) translate(-3px, -8px); }
+.robotics-float-label {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(6, 13, 13, .72);
+  backdrop-filter: blur(16px);
+  font-size: .72rem;
+  font-weight: 800;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .3);
+}
+.robotics-float-label.label-perception { right: 2%; top: 6%; }
+.robotics-float-label.label-control { left: 2%; bottom: 6%; }
+
+.robotics-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+.robotics-pipeline-grid article {
+  position: relative;
+  min-height: 255px;
+  padding: 24px 20px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  transition: transform .3s ease, border-color .3s ease;
+}
+.robotics-pipeline-grid article:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -13px;
+  top: 32px;
+  z-index: 3;
+  color: #52e5b5;
+  font-weight: 900;
+}
+.robotics-pipeline-grid article:hover {
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, #52e5b5 50%, var(--line));
+}
+.robotics-pipeline-grid span {
+  display: block;
+  margin-bottom: 35px;
+  color: #52e5b5;
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+.robotics-pipeline-grid h3 { margin-bottom: 10px; font-size: 1.08rem; }
+.robotics-pipeline-grid p { color: var(--text-soft); font-size: .86rem; line-height: 1.62; }
+
+.robotics-progress-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.robotics-progress-board article {
+  position: relative;
+  min-height: 260px;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--surface);
+}
+.robotics-progress-board article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--line);
+}
+.robotics-progress-board article.complete::before { background: #52e5b5; }
+.robotics-progress-board article.active::before { background: #45d4ff; }
+.robotics-progress-board article.active {
+  border-color: color-mix(in srgb, #45d4ff 40%, var(--line));
+  background:
+    radial-gradient(circle at 90% 10%, rgba(69, 212, 255, .12), transparent 34%),
+    var(--surface);
+}
+.robotics-progress-board span {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: var(--text-soft);
+  font-size: .7rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.robotics-progress-board article.complete span { color: #34c99a; }
+.robotics-progress-board article.active span { color: #45bfe9; }
+.robotics-progress-board h3 { margin-bottom: 12px; font-size: 1.2rem; }
+.robotics-progress-board p { color: var(--text-soft); line-height: 1.7; font-size: .9rem; }
+
+.robotics-gallery {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 14px;
+}
+.robotics-gallery button {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  cursor: zoom-in;
+  text-align: left;
+}
+.robotics-gallery button:first-child {
+  grid-row: span 2;
+}
+.robotics-gallery-frame {
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 23px;
+  background: #080c0d;
+  transition: transform .3s ease, border-color .3s ease;
+}
+.robotics-gallery button:first-child .robotics-gallery-frame {
+  height: 100%;
+  min-height: 535px;
+}
+.robotics-gallery-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.robotics-gallery button:first-child img { object-position: 50% 54%; }
+.robotics-gallery button:nth-child(4) img { object-position: 50% 55%; }
+.robotics-gallery button:nth-child(5) img { object-position: 50% 48%; }
+.robotics-gallery button:hover .robotics-gallery-frame {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, #52e5b5 50%, var(--line));
+}
+.robotics-gallery small {
+  display: block;
+  margin: 10px 4px 0;
+  color: var(--text-soft);
+  font-weight: 750;
+}
+.robotics-final-cta {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(82, 229, 181, .16), transparent 30%),
+    var(--surface);
+}
+
+@media (max-width: 1050px) {
+  .robotics-pipeline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .robotics-pipeline-grid article:last-child { grid-column: 1 / -1; }
+  .robotics-pipeline-grid article::after { display: none; }
+  .robotics-progress-board { grid-template-columns: 1fr; }
+  .robotics-progress-board article { min-height: 0; }
+  .robotics-gallery { grid-template-columns: 1fr 1fr; }
+  .robotics-gallery button:first-child { grid-column: 1 / -1; grid-row: auto; }
+  .robotics-gallery button:first-child .robotics-gallery-frame { height: 420px; min-height: 0; }
+}
+
+@media (max-width: 760px) {
+  .media-robotics { height: 310px; min-height: 0; padding: 16px; }
+  .robotics-card-shot.primary { inset: 17% 4% 8% 1%; }
+  .robotics-card-shot.secondary-a,
+  .robotics-card-shot.secondary-b { width: 45%; }
+  .detail-progress-pill { display: none; }
+  .robotics-detail-visual { min-height: 470px; }
+  .robotics-detail-shot.main { inset: 5% 1% 29% 1%; }
+  .robotics-detail-shot.code { width: 49%; height: 34%; }
+  .robotics-detail-shot.electronics { width: 53%; height: 32%; }
+  .robotics-float-label { display: none; }
+  .robotics-pipeline-grid { grid-template-columns: 1fr; }
+  .robotics-pipeline-grid article:last-child { grid-column: auto; }
+  .robotics-gallery { grid-template-columns: 1fr; }
+  .robotics-gallery button:first-child { grid-column: auto; }
+  .robotics-gallery-frame,
+  .robotics-gallery button:first-child .robotics-gallery-frame { height: 260px; }
+}
