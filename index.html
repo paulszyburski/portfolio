@@ -313,30 +313,47 @@
                     </button>
                   </div>
                 </article>
+
+<article class="project-card reveal robotics-card" data-category="robotics" data-project-card="robotics-car" tabindex="0" role="link" aria-label="Open autonomous parking robot case study">
+  <div class="project-media media-robotics">
+    <div class="robotics-source-bank" aria-hidden="true">
+      <img data-robotics-source="rig-1" src="assets/robotics-rig-1.webp" alt="" />
+      <img data-robotics-source="rig-2" src="assets/robotics-rig-2.webp" alt="" />
+      <img data-robotics-source="rig-3" src="assets/robotics-rig-3.webp" alt="" />
+      <img data-robotics-source="code" src="assets/robotics-code.webp" alt="" />
+      <img data-robotics-source="electronics" src="assets/robotics-electronics.webp" alt="" />
+    </div>
+    <div class="robotics-card-collage" aria-label="Autonomous car hardware photographs">
+      <span class="robotics-card-badge"><i></i> Hardware build in progress</span>
+      <button class="robotics-card-shot primary" type="button" data-detail-lightbox="robotics-rig-1" aria-label="Expand autonomous robot development rig photo">
+        <img data-robotics-card-shot="rig-1" alt="Autonomous robot connected to its sensor and power development rig" />
+      </button>
+      <button class="robotics-card-shot secondary-a" type="button" data-detail-lightbox="robotics-code" aria-label="Expand robot and code photo">
+        <img data-robotics-card-shot="code" alt="Physical robot positioned in front of its Python control code" />
+      </button>
+      <button class="robotics-card-shot secondary-b" type="button" data-detail-lightbox="robotics-electronics" aria-label="Expand power electronics photo">
+        <img data-robotics-card-shot="electronics" alt="Breadboard, power conversion hardware and distance sensor used by the robot" />
+      </button>
+    </div>
+  </div>
+  <div class="project-content">
+    <div class="project-topline"><span class="project-index">04</span><span class="project-status in-progress">In progress</span></div>
+    <div>
+      <p class="project-category">Robotics / Electronics</p>
+      <h3>Autonomous Parking Robot</h3>
+      <p>A physical robot that brings the parking project out of simulation by combining Python control software, onboard computing, cameras, distance sensing and real motor movement.</p>
+    </div>
+    <div class="robotics-progress-note"><strong>Current stage</strong><span>Power, sensor and control integration on real hardware.</span></div>
+    <div class="project-tags"><span>Raspberry Pi</span><span>Python</span><span>Computer Vision</span><span>Sensors</span></div>
+    <button class="project-case-study-link" type="button" data-open-robotics-detail>
+      Explore the hardware case study <i>↗</i>
+    </button>
+  </div>
+</article>
         </div>
 
         <div class="project-group project-group--without-media">
-        <article class="project-card reveal" data-category="robotics">
-                  <div class="project-media media-robot">
-                    <div class="media-label">Replace with robot photo / video</div>
-                    <div class="robot-visual" aria-hidden="true">
-                      <div class="robot-body"><i></i><i></i></div>
-                      <div class="robot-wheel wheel-left"></div>
-                      <div class="robot-wheel wheel-right"></div>
-                      <div class="sensor-wave wave-one"></div>
-                      <div class="sensor-wave wave-two"></div>
-                    </div>
-                  </div>
-                  <div class="project-content">
-                    <div class="project-topline"><span class="project-index">04</span><span class="project-status in-progress">In progress</span></div>
-                    <div>
-                      <p class="project-category">Robotics / Electronics</p>
-                      <h3>Real-World Autonomous Parking Car</h3>
-                      <p>A physical robotic car that transfers the parking logic from simulation into the real world using sensors, electronics and embedded software.</p>
-                    </div>
-                    <div class="project-tags"><span>Raspberry Pi</span><span>Robotics</span><span>Sensors</span><span>Python</span></div>
-                  </div>
-                </article>
+        
         <article class="project-card reveal" data-category="apps">
                   <div class="project-media media-app-two">
                     <div class="media-label">Replace with app preview</div>
@@ -556,6 +573,142 @@
       </main>
     </div>
   </section>
+
+
+<section class="project-detail-screen robotics-detail" data-project-detail="robotics-car" role="dialog" aria-modal="true" aria-labelledby="robotics-detail-title" aria-hidden="true">
+  <div class="project-detail-noise" aria-hidden="true"></div>
+
+  <header class="project-detail-nav">
+    <div class="project-detail-nav-inner">
+      <button class="detail-back-button" type="button" data-close-robotics-detail><span aria-hidden="true">←</span>Back to portfolio</button>
+      <a class="detail-brand" href="#top" data-close-robotics-link aria-label="Paweł portfolio home"><span class="brand-mark">P</span><span>Robotics case study</span></a>
+      <div class="detail-nav-actions">
+        <button class="theme-toggle robotics-detail-theme-toggle" type="button" aria-label="Switch color theme"><span class="theme-icon sun">☀</span><span class="theme-icon moon">☾</span></button>
+        <span class="detail-progress-pill"><i></i> In development</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="project-detail-scroll" data-robotics-detail-scroll>
+    <main class="project-detail-main">
+      <section class="detail-hero">
+        <div class="detail-hero-copy">
+          <div class="detail-eyebrow-row">
+            <span class="detail-kicker"><i></i> Robotics and electronics</span>
+            <span class="detail-status"><i></i> Hardware integration</span>
+          </div>
+          <h1 id="robotics-detail-title">Autonomous<br />Parking Robot</h1>
+          <p class="detail-hero-lead">An in-progress physical robot that transfers the perception and parking ideas from the PyBullet project into a real system with sensors, electronics and motor control.</p>
+          <div class="detail-hero-actions">
+            <button class="primary-button detail-scroll-button magnetic" type="button" data-scroll-detail="robotics-system">Explore the system <span>↓</span></button>
+            <a class="secondary-button" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">My GitHub profile <span>↗</span></a>
+          </div>
+          <dl class="detail-meta-grid">
+            <div><dt>Compute</dt><dd>Raspberry Pi</dd></div>
+            <div><dt>Platform</dt><dd>Mobile robot</dd></div>
+            <div><dt>Control</dt><dd>Python</dd></div>
+            <div><dt>Status</dt><dd>In progress</dd></div>
+          </dl>
+        </div>
+
+        <div class="robotics-detail-visual" aria-label="Autonomous parking robot development photographs">
+          <button class="robotics-detail-shot main" type="button" data-detail-lightbox="robotics-rig-2" aria-label="Expand complete development rig photo">
+            <img data-robotics-detail-shot="rig-2" alt="Autonomous robot connected to power electronics, a breadboard and distance sensing hardware" />
+          </button>
+          <button class="robotics-detail-shot code" type="button" data-detail-lightbox="robotics-code" aria-label="Expand robot software development photo">
+            <img data-robotics-detail-shot="code" alt="Robot hardware in front of the Python control program used during development" />
+          </button>
+          <button class="robotics-detail-shot electronics" type="button" data-detail-lightbox="robotics-electronics" aria-label="Expand electronics bench photo">
+            <img data-robotics-detail-shot="electronics" alt="Power conversion, breadboard wiring and sensor hardware used for the autonomous robot" />
+          </button>
+          <span class="robotics-float-label label-perception"><i></i> Camera and distance sensing</span>
+          <span class="robotics-float-label label-control"><i></i> Real motor control</span>
+        </div>
+      </section>
+
+      <section class="detail-stats" aria-label="Autonomous robot project overview">
+        <article><span>01</span><strong>Physical platform</strong><p>A real mobile robot with onboard computing and controllable motors.</p></article>
+        <article><span>02</span><strong>Sensor integration</strong><p>Camera and distance measurements provide information about the surroundings.</p></article>
+        <article><span>03</span><strong>Simulation transfer</strong><p>The project tests how parking logic changes when it meets real hardware.</p></article>
+      </section>
+
+      <section class="detail-section" id="robotics-system">
+        <div class="detail-section-heading compact">
+          <div><p class="kicker">System flow</p><h2>Sense, calculate<br />and move.</h2></div>
+          <p class="section-side-copy">The build connects perception, geometry and low-level motion into one loop that can eventually park without manual control.</p>
+        </div>
+        <div class="robotics-pipeline-grid">
+          <article><span>01</span><h3>Capture</h3><p>Read the camera and distance sensors to observe markings, obstacles and free space.</p></article>
+          <article><span>02</span><h3>Estimate</h3><p>Convert visual angles and measured distances into a local position relative to the target.</p></article>
+          <article><span>03</span><h3>Plan</h3><p>Choose the next rotation and movement needed to approach the parking position.</p></article>
+          <article><span>04</span><h3>Control</h3><p>Send steering and motor commands through the robot controller.</p></article>
+          <article><span>05</span><h3>Verify</h3><p>Measure again after movement and correct errors caused by real-world noise and drift.</p></article>
+        </div>
+      </section>
+
+      <section class="detail-section robotics-progress-section">
+        <div class="detail-section-heading compact">
+          <div><p class="kicker">Development status</p><h2>What works now<br />and what comes next.</h2></div>
+        </div>
+        <div class="robotics-progress-board">
+          <article class="complete">
+            <span>Built</span>
+            <h3>Robot control foundation</h3>
+            <p>Python software can communicate with the robot, rotate it, move it and read ultrasonic distance measurements.</p>
+          </article>
+          <article class="active">
+            <span>Current</span>
+            <h3>Hardware integration</h3>
+            <p>The current bench setup focuses on stable power delivery, camera input, sensor wiring and reliable measurements.</p>
+          </article>
+          <article>
+            <span>Next</span>
+            <h3>Closed-loop parking</h3>
+            <p>The next stage is combining perception and movement into repeated corrections that finish a complete parking maneuver.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section challenge-section">
+        <div class="detail-section-heading compact"><div><p class="kicker">Engineering focus</p><h2>The real world adds<br />new problems.</h2></div></div>
+        <div class="challenge-grid">
+          <article><span class="challenge-number">01</span><h3>Reliable power</h3><p>Computers, motors and sensors need different voltages and can create noisy loads.</p><strong>Approach</strong><p>Test power conversion and distribution separately before connecting the complete robot.</p></article>
+          <article><span class="challenge-number">02</span><h3>Noisy measurements</h3><p>Real sensors vary with angle, lighting, surfaces and movement.</p><strong>Approach</strong><p>Repeat readings, validate them and build control logic that expects imperfect data.</p></article>
+          <article><span class="challenge-number">03</span><h3>Coordinate transfer</h3><p>Simulation exposes exact positions while physical hardware only sees indirect measurements.</p><strong>Approach</strong><p>Estimate local position from camera angles and measured distances, then correct after every movement.</p></article>
+        </div>
+      </section>
+
+      <section class="detail-section detail-gallery-section">
+        <div class="detail-section-heading compact">
+          <div><p class="kicker">Build gallery</p><h2>Software meeting<br />physical hardware.</h2></div>
+          <p class="section-side-copy">Click a photograph to inspect the development setup at full size.</p>
+        </div>
+        <div class="robotics-gallery">
+          <button type="button" data-detail-lightbox="robotics-rig-1"><div class="robotics-gallery-frame"><img data-robotics-detail-shot="rig-1" alt="Complete autonomous robot development setup with wiring and power electronics" /></div><small>Full development rig</small></button>
+          <button type="button" data-detail-lightbox="robotics-rig-2"><div class="robotics-gallery-frame"><img data-robotics-detail-shot="rig-2" alt="Autonomous robot and connected electronics photographed from a wider angle" /></div><small>Sensor integration</small></button>
+          <button type="button" data-detail-lightbox="robotics-rig-3"><div class="robotics-gallery-frame"><img data-robotics-detail-shot="rig-3" alt="Autonomous robot during power and hardware integration testing" /></div><small>Hardware testing</small></button>
+          <button type="button" data-detail-lightbox="robotics-code"><div class="robotics-gallery-frame"><img data-robotics-detail-shot="code" alt="Robot positioned in front of the Python code used to control and calibrate it" /></div><small>Python control software</small></button>
+          <button type="button" data-detail-lightbox="robotics-electronics"><div class="robotics-gallery-frame"><img data-robotics-detail-shot="electronics" alt="Close view of the breadboard, voltage converter and distance sensing hardware" /></div><small>Power and electronics</small></button>
+        </div>
+      </section>
+
+      <section class="detail-section stack-section">
+        <div><p class="kicker">Technology</p><h2>A mixed software<br />and hardware stack.</h2></div>
+        <div class="stack-cloud" aria-label="Autonomous robot technologies">
+          <span class="large">Python</span><span>Raspberry Pi</span><span class="large">Computer vision</span><span>Ultrasonic sensing</span><span>Distance sensing</span><span>Motor control</span><span>Electronics</span><span>Geometry</span><span>Robotics</span>
+        </div>
+      </section>
+
+      <section class="detail-final-cta robotics-final-cta">
+        <div><p class="kicker">Work in progress</p><h2>The simulation is becoming<br />a real autonomous system.</h2><p>This project is still being developed. New hardware tests and parking milestones will be added as the robot becomes more independent.</p></div>
+        <a class="detail-final-button magnetic" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">Visit my GitHub profile <span>↗</span></a>
+      </section>
+
+      <footer class="detail-footer"><button type="button" data-close-robotics-detail><span>←</span> Return to all projects</button><p>Designed and built by Paweł.</p></footer>
+    </main>
+  </div>
+</section>
+
 
   <section class="project-detail-screen reptra-detail" data-project-detail="reptra" role="dialog" aria-modal="true" aria-labelledby="reptra-detail-title" aria-hidden="true">
     <div class="project-detail-noise" aria-hidden="true"></div>
