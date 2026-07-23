@@ -3,8 +3,6 @@ const themeToggle = document.querySelector('.theme-toggle');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const header = document.querySelector('.site-header');
-const cursorGlow = document.querySelector('.cursor-glow');
-const rotatingWord = document.querySelector('.rotating-word');
 
 let savedTheme = null;
 try {
@@ -52,30 +50,7 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 24);
 });
 
-const revealElements = [...document.querySelectorAll('.reveal')];
-revealElements.forEach(element => {
-  const delay = element.dataset.delay;
-  if (delay) element.style.setProperty('--delay', `${delay}ms`);
-});
-
-if ('IntersectionObserver' in window) {
-  // Only hide elements after JavaScript is confirmed to be running. Without JS,
-  // every section stays visible instead of leaving an empty page.
-  revealElements.forEach(element => element.classList.add('reveal-pending'));
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
-
-  revealElements.forEach(element => revealObserver.observe(element));
-} else {
-  revealElements.forEach(element => element.classList.add('visible'));
-}
+document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
 
 const filters = document.querySelectorAll('.filter');
 const projectCards = document.querySelectorAll('.project-card');
@@ -89,60 +64,9 @@ filters.forEach(button => {
     projectCards.forEach(card => {
       const show = selected === 'all' || card.dataset.category === selected;
       card.classList.toggle('hidden', !show);
-      if (show) {
-        card.animate(
-          [
-            { opacity: 0, transform: 'translateY(18px) scale(.985)' },
-            { opacity: 1, transform: 'translateY(0) scale(1)' }
-          ],
-          { duration: 430, easing: 'cubic-bezier(.2,.8,.2,1)' }
-        );
-      }
     });
   });
 });
-
-const words = ['software.', 'robots.', 'systems.', 'ideas.'];
-let wordIndex = 0;
-setInterval(() => {
-  rotatingWord.classList.add('out');
-  setTimeout(() => {
-    wordIndex = (wordIndex + 1) % words.length;
-    rotatingWord.textContent = words[wordIndex];
-    rotatingWord.classList.remove('out');
-  }, 260);
-}, 2700);
-
-if (window.matchMedia('(pointer: fine)').matches) {
-  window.addEventListener('mousemove', event => {
-    cursorGlow.style.opacity = '1';
-    cursorGlow.style.left = `${event.clientX}px`;
-    cursorGlow.style.top = `${event.clientY}px`;
-  });
-
-  document.querySelectorAll('.magnetic').forEach(element => {
-    element.addEventListener('mousemove', event => {
-      const rect = element.getBoundingClientRect();
-      const x = event.clientX - rect.left - rect.width / 2;
-      const y = event.clientY - rect.top - rect.height / 2;
-      element.style.transform = `translate(${x * 0.08}px, ${y * 0.08}px)`;
-    });
-    element.addEventListener('mouseleave', () => {
-      element.style.transform = '';
-    });
-  });
-
-  const tiltCard = document.querySelector('.tilt-card');
-  tiltCard.addEventListener('mousemove', event => {
-    const rect = tiltCard.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    tiltCard.style.transform = `rotateY(${x * 10 - 6}deg) rotateX(${-y * 10 + 3}deg) translateY(-3px)`;
-  });
-  tiltCard.addEventListener('mouseleave', () => {
-    tiltCard.style.transform = 'rotateY(-8deg) rotateX(5deg)';
-  });
-}
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -190,7 +114,6 @@ function hydrateReptraImages(root = document) {
 hydrateReptraImages();
 
 const reptraGallery = document.querySelector('[data-reptra-gallery]');
-let reptraGalleryTimer;
 if (reptraGallery) {
   const order = ['home', 'logger', 'stats', 'distribution', 'calendar'];
   const slots = [...reptraGallery.querySelectorAll('[data-reptra-card-shot]')];
@@ -214,26 +137,15 @@ if (reptraGallery) {
     dots.forEach(dot => dot.classList.toggle('active', dot.dataset.reptraSelect === name));
   };
 
-  const startReptraRotation = () => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    clearInterval(reptraGalleryTimer);
-    reptraGalleryTimer = setInterval(() => showReptraSet(order[(activeIndex + 1) % order.length]), 4200);
-  };
-
   dots.forEach(dot => dot.addEventListener('click', event => {
     event.stopPropagation();
     showReptraSet(dot.dataset.reptraSelect);
-    startReptraRotation();
   }));
-  reptraGallery.addEventListener('mouseenter', () => clearInterval(reptraGalleryTimer));
-  reptraGallery.addEventListener('mouseleave', startReptraRotation);
   showReptraSet('home');
-  startReptraRotation();
 }
 
 // Goldbridge screenshot switcher
 const goldbridgeGallery = document.querySelector('[data-goldbridge-gallery]');
-let goldbridgeTimer;
 
 if (goldbridgeGallery) {
   const goldbridgeTabs = [...goldbridgeGallery.querySelectorAll('[data-goldbridge-tab]')];
@@ -257,25 +169,11 @@ if (goldbridgeGallery) {
     });
   };
 
-  const startGoldbridgeRotation = () => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    clearInterval(goldbridgeTimer);
-    goldbridgeTimer = setInterval(() => {
-      const nextIndex = (currentShotIndex + 1) % shotNames.length;
-      showGoldbridgeShot(shotNames[nextIndex]);
-    }, 4300);
-  };
-
   goldbridgeTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       showGoldbridgeShot(tab.dataset.goldbridgeTab);
-      startGoldbridgeRotation();
     });
   });
-
-  goldbridgeGallery.addEventListener('mouseenter', () => clearInterval(goldbridgeTimer));
-  goldbridgeGallery.addEventListener('mouseleave', startGoldbridgeRotation);
-  startGoldbridgeRotation();
 }
 
 // Project image lightbox
