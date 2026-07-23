@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Paweł, developer, AI and robotics builder." />
+  <meta name="description" content="Paweł’s portfolio: apps, Python projects, robotics and web development." />
   <meta name="theme-color" content="#090b12" />
   <title>Paweł | Developer Portfolio</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <meta name="deployment-version" content="2026-07-11-cloudflare-fix-2" />
+  <meta name="deployment-version" content="2026-07-23-human-edit" />
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
-
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Paweł portfolio home">
       <span class="brand-mark">P</span>
@@ -46,27 +43,21 @@
 
   <main>
     <section class="hero section-shell" aria-labelledby="hero-title">
-      <div class="hero-orb orb-one"></div>
-      <div class="hero-orb orb-two"></div>
-
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Building ambitious things at 15</div>
-        <h1 id="hero-title">
-          I turn ideas into
-          <span class="gradient-text rotating-word" aria-live="polite">software.</span>
-        </h1>
+        <div class="eyebrow">Developer, app builder and robotics hobbyist</div>
+        <h1 id="hero-title">I build apps, tools and robots.</h1>
         <p class="hero-lead">
-          I’m Paweł, a developer exploring apps, AI, robotics, automation,
-          web scraping, data analysis and modern web experiences.
+          I’m Paweł. I work mostly with Python and Android, and I also build websites, data tools and small robotics projects.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary magnetic" href="#projects">Explore my projects <span>↘</span></a>
-          <a class="button button-ghost magnetic" href="#contact">Let’s connect</a>
+          <a class="button button-primary" href="#projects">View projects</a>
+          <a class="button button-ghost" href="#contact">Contact me</a>
         </div>
         <div class="hero-meta">
-          <span><strong>6+</strong> project areas</span>
-          <span><strong>2</strong> mobile apps</span>
-          <span><strong>1</strong> real-world robot</span>
+          <span>Python</span>
+          <span>Android</span>
+          <span>Robotics</span>
+          <span>Web development</span>
         </div>
       </div>
 
@@ -84,16 +75,8 @@
             <div class="indent double"><span class="code-purple">return</span> self.<span class="code-blue">optimize</span>(trajectory)</div>
             <div class="terminal-line"><span>➜</span> parking accuracy improving<span class="typing-dots">...</span></div>
           </div>
-          <div class="floating-chip chip-ai">AI</div>
-          <div class="floating-chip chip-robotics">Robotics</div>
-          <div class="floating-chip chip-apps">Apps</div>
         </div>
       </div>
-
-      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
-        <span>Scroll</span>
-        <i></i>
-      </a>
     </section>
 
     <section class="about section-shell" id="about">
@@ -101,43 +84,40 @@
         <span class="section-number">01</span>
         <div>
           <p class="kicker">About me</p>
-          <h2>Curious by default.<br />Always building.</h2>
+          <h2>About me</h2>
         </div>
       </div>
 
       <div class="about-grid">
         <div class="about-copy reveal">
           <p class="large-copy">
-            I enjoy projects where software has to understand the world, make decisions,
-            automate repetitive work or control something physical.
+            I like making projects that do something useful, whether that means tracking workouts, processing data or controlling a small robot.
           </p>
           <p>
-            My work ranges from Android apps and websites to AI simulations, robotics,
-            scraping pipelines and large-scale data analysis. I care about clean code,
-            useful products and the feeling that every new project teaches me something difficult.
+            Most of my work is in Python, Android and web development. I try to keep my code understandable, test things properly and finish projects instead of leaving them as demos.
           </p>
         </div>
 
         <div class="principles-grid reveal" data-delay="120">
           <article class="principle-card">
             <span>01</span>
-            <h3>Learn by building</h3>
-            <p>I choose real projects instead of isolated tutorials.</p>
+            <h3>Build real projects</h3>
+            <p>I learn faster when I have a real problem to solve.</p>
           </article>
           <article class="principle-card">
             <span>02</span>
-            <h3>Think in systems</h3>
-            <p>I connect software, hardware, data and user experience.</p>
+            <h3>Keep it understandable</h3>
+            <p>I prefer simple code and clear project structure.</p>
           </article>
           <article class="principle-card">
             <span>03</span>
-            <h3>Improve constantly</h3>
-            <p>I test ideas, find weak points and iterate until they work.</p>
+            <h3>Test on real problems</h3>
+            <p>I test what I make and fix the parts that fail.</p>
           </article>
           <article class="principle-card">
             <span>04</span>
-            <h3>Make it useful</h3>
-            <p>Technology is most exciting when it solves a real problem.</p>
+            <h3>Finish what I start</h3>
+            <p>A working project matters more to me than a perfect mockup.</p>
           </article>
         </div>
       </div>
@@ -147,8 +127,8 @@
       <div class="section-heading reveal">
         <span class="section-number">02</span>
         <div>
-          <p class="kicker">Selected work</p>
-          <h2>Projects across code,<br />data and machines.</h2>
+          <p class="kicker">Projects</p>
+          <h2>My projects</h2>
         </div>
       </div>
 
@@ -180,17 +160,17 @@
                   <div class="project-content">
                     <div class="project-topline">
                       <span class="project-index">01</span>
-                      <span class="project-status">Core AI project</span>
+                      <span class="project-status">Personal project</span>
                     </div>
                     <div>
                       <p class="project-category">Artificial Intelligence</p>
                       <h3>AI Parking Driver Simulation</h3>
-                      <p>A PyBullet driving environment where a neural network learns vehicle control from data generated by a custom scripted parking algorithm.</p>
+                      <p>A PyBullet parking simulation. A scripted controller generates driving examples, then a neural network learns from them.</p>
                     </div>
-                    <div class="ai-method-note"><strong>Training approach</strong><span>Expert-generated state/action examples → supervised neural-network training.</span></div>
+                    <div class="ai-method-note"><strong>Training approach</strong><span>The scripted controller creates examples used to train the neural network.</span></div>
                     <div class="project-tags"><span>Python</span><span>PyBullet</span><span>Neural Network</span><span>Imitation Learning</span></div>
                     <button class="project-case-study-link" type="button" data-open-parking-detail>
-                      Explore the AI case study <i>↗</i>
+                      View project details
                     </button>
                   </div>
                 </article>
@@ -218,18 +198,17 @@
                       <p class="project-category">Android App</p>
                       <h3>Reptra</h3>
                       <p>
-                        A clean, focused workout logger built to make routines, sets, progress and training
-                        analytics easy to use without distracting clutter.
+                        An Android workout logger for saving routines, recording sets and checking training history.
                       </p>
                     </div>
                     <div class="project-tags"><span>Android</span><span>Workout Tracking</span><span>Mobile UI</span><span>Google Play</span></div>
                     <div class="reptra-actions-row">
                       <button class="project-case-study-link" type="button" data-open-reptra-detail>
-                        Explore the app case study <i>↗</i>
+                        View project details
                       </button>
                       <a class="reptra-store-link" href="https://play.google.com/store/apps/details?id=com.anonymous.reptra" target="_blank" rel="noreferrer">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.7 2.6c-.45.48-.7 1.23-.7 2.16v14.48c0 .93.25 1.68.7 2.16l.08.08L12.1 13.1v-2.2L3.78 2.52l-.08.08Zm11.17 12.27-2.77-2.78v-.2l2.78-2.78.06.04 3.3 1.88c.94.53.94 1.4 0 1.94l-3.3 1.88-.07.02Zm-.97.55-2.78-2.79-7.34 7.4c.27.29.71.33 1.21.05l8.91-5.07v.41Zm0-6.84L4.99 3.51c-.5-.28-.94-.24-1.21.05l7.34 7.4 2.78-2.38Z"/></svg>
-                        View on Google Play ↗
+                        Google Play
                       </a>
                     </div>
                   </div>
@@ -259,7 +238,7 @@
                           src="assets/goldbridge-json.png"
                           alt="Goldbridge structured JSON output open in Visual Studio Code"
                         />
-                        <span class="goldbridge-expand">Click to expand ↗</span>
+                        <span class="goldbridge-expand">Open image</span>
                       </button>
         
                       <div class="pipeline-flow" aria-label="Goldbridge pipeline stages">
@@ -281,14 +260,10 @@
                       <p class="project-category">Automation / Web Scraping / Data Analysis</p>
                       <h3>Goldbridge</h3>
                       <p>
-                        Goldbridge collects product and program data, transforms messy source material
-                        into structured records, and runs it through a multi-stage analysis pipeline to
-                        identify promising online business opportunities.
+                        Goldbridge collects product and program data, cleans it and stores it in a consistent format.
                       </p>
                       <p>
-                        It generates buyer-intent search queries, validates them against real search
-                        results, scores competition, and preserves clear pass/fail reasons so every
-                        decision stays reviewable and easy to improve.
+                        It also checks search results, scores competition and saves the reason behind each decision.
                       </p>
                     </div>
         
@@ -308,7 +283,7 @@
                     </div>
         
                     <button class="project-case-study-link" type="button" data-open-project-detail>
-                      <span>Explore full case study</span>
+                      <span>View project details</span>
                       <i aria-hidden="true">↗</i>
                     </button>
                   </div>
@@ -341,12 +316,12 @@
     <div>
       <p class="project-category">Robotics / Electronics</p>
       <h3>Autonomous Parking Robot</h3>
-      <p>A physical robot that brings the parking project out of simulation by combining Python control software, onboard computing, cameras, distance sensing and real motor movement.</p>
+      <p>A small physical robot controlled with Python, a Raspberry Pi, cameras, distance sensors and motors.</p>
     </div>
-    <div class="robotics-progress-note"><strong>Current stage</strong><span>Power, sensor and control integration on real hardware.</span></div>
+    <div class="robotics-progress-note"><strong>Current stage</strong><span>Connecting power, sensors and motor control on the real robot.</span></div>
     <div class="project-tags"><span>Raspberry Pi</span><span>Python</span><span>Computer Vision</span><span>Sensors</span></div>
     <button class="project-case-study-link" type="button" data-open-robotics-detail>
-      Explore the hardware case study <i>↗</i>
+      View project details
     </button>
   </div>
 </article>
@@ -365,8 +340,8 @@
                     <div class="project-topline"><span class="project-index">05</span><span class="project-status in-progress">In progress</span></div>
                     <div>
                       <p class="project-category">Mobile App</p>
-                      <h3>Upcoming App</h3>
-                      <p>A second app currently under development. This card is ready for a product description, development story and launch status.</p>
+                      <h3>Second Android App</h3>
+                      <p>A second Android app I’m currently working on. I’ll add more details when it is ready to share.</p>
                     </div>
                     <div class="project-tags"><span>App Development</span><span>Product Design</span><span>Beta</span></div>
                   </div>
@@ -382,8 +357,8 @@
                     <div class="project-topline"><span class="project-index">06</span><span class="project-status">Collection</span></div>
                     <div>
                       <p class="project-category">Websites</p>
-                      <h3>Modern Web Projects</h3>
-                      <p>A growing set of responsive websites focused on polished interfaces, smooth interactions and clear user experience.</p>
+                      <h3>Websites</h3>
+                      <p>A few responsive websites I have built while learning layout, accessibility and JavaScript.</p>
                     </div>
                     <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
                   </div>
@@ -397,8 +372,8 @@
       <div class="section-heading reveal">
         <span class="section-number">03</span>
         <div>
-          <p class="kicker">What I work with</p>
-          <h2>A toolbox that keeps growing.</h2>
+          <p class="kicker">Skills</p>
+          <h2>Tools I use</h2>
         </div>
       </div>
 
@@ -413,22 +388,22 @@
         <article class="skill-panel reveal">
           <span class="skill-icon">⌘</span>
           <h3>Software</h3>
-          <p>App architecture, Python programming, algorithms, APIs and maintainable project structure.</p>
+          <p>Python, Android development, APIs and basic application architecture.</p>
         </article>
         <article class="skill-panel reveal" data-delay="80">
           <span class="skill-icon">◉</span>
           <h3>AI & Data</h3>
-          <p>Simulation, computer vision, autonomous decision-making, scraping and analytical pipelines.</p>
+          <p>PyBullet simulations, neural networks, computer vision, scraping and data processing.</p>
         </article>
         <article class="skill-panel reveal" data-delay="160">
           <span class="skill-icon">⌁</span>
           <h3>Hardware</h3>
-          <p>Robotic vehicles, Raspberry Pi, sensors, electronics, testing and real-world integration.</p>
+          <p>Raspberry Pi, motors, cameras, distance sensors and basic electronics.</p>
         </article>
         <article class="skill-panel reveal" data-delay="240">
           <span class="skill-icon">◇</span>
           <h3>Web</h3>
-          <p>Responsive layouts, modern visual systems, interactions, animation and usability.</p>
+          <p>HTML, CSS and JavaScript for responsive, accessible websites.</p>
         </article>
       </div>
     </section>
@@ -436,11 +411,11 @@
     <section class="contact section-shell" id="contact">
       <div class="contact-card reveal">
         <div class="contact-orb"></div>
-        <p class="kicker">Let’s build something</p>
-        <h2>Have an interesting idea?</h2>
-        <p>Have a project idea, collaboration, or just want to talk about software, AI, or robotics? Reach me by email or GitHub.</p>
+        <p class="kicker">Contact</p>
+        <h2>Get in touch</h2>
+        <p>You can reach me by email or find my code on GitHub.</p>
         <div class="contact-actions">
-          <a class="button button-light magnetic" href="mailto:paul.szyburski@gmail.com">paul.szyburski@gmail.com <span>↗</span></a>
+          <a class="button button-light" href="mailto:paul.szyburski@gmail.com">paul.szyburski@gmail.com <span>↗</span></a>
           <a class="social-link" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer" aria-label="Paweł's GitHub profile">GitHub</a>
         </div>
       </div>
@@ -456,7 +431,7 @@
     <header class="project-detail-nav">
       <div class="project-detail-nav-inner">
         <button class="detail-back-button" type="button" data-close-parking-detail><span aria-hidden="true">←</span>Back to portfolio</button>
-        <a class="detail-brand" href="#top" data-close-parking-link aria-label="Paweł portfolio home"><span class="brand-mark">P</span><span>AI case study</span></a>
+        <a class="detail-brand" href="#top" data-close-parking-link aria-label="Paweł portfolio home"><span class="brand-mark">P</span><span>Parking simulation</span></a>
         <div class="detail-nav-actions">
           <button class="theme-toggle parking-detail-theme-toggle" type="button" aria-label="Switch color theme"><span class="theme-icon sun">☀</span><span class="theme-icon moon">☾</span></button>
           <a class="detail-github-button" href="https://github.com/paulszyburski/Driver" target="_blank" rel="noreferrer" data-parking-github-link>
@@ -476,10 +451,10 @@
               <span class="detail-status"><i></i> Simulation complete</span>
             </div>
             <h1 id="parking-ai-detail-title">AI Parking<br />Driver</h1>
-            <p class="detail-hero-lead">A physics-based vehicle simulation used to generate driving examples and train a neural network to reproduce an expert parking controller.</p>
+            <p class="detail-hero-lead">A PyBullet vehicle simulation that generates parking examples and uses them to train a neural network.</p>
             <div class="detail-hero-actions">
-              <a class="primary-button magnetic" href="https://github.com/paulszyburski/Driver" target="_blank" rel="noreferrer" data-parking-github-link>View repository <span>↗</span></a>
-              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="parking-ai-pipeline">See the training flow <span>↓</span></button>
+              <a class="primary-button" href="https://github.com/paulszyburski/Driver" target="_blank" rel="noreferrer" data-parking-github-link>View code</a>
+              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="parking-ai-pipeline">How it works</button>
             </div>
             <dl class="detail-meta-grid">
               <div><dt>Environment</dt><dd>PyBullet</dd></div>
@@ -507,7 +482,7 @@
         <section class="detail-section" id="parking-ai-pipeline">
           <div class="detail-section-heading compact">
             <div><p class="kicker">Training pipeline</p><h2>From driving logic<br />to learned behavior.</h2></div>
-            <p class="section-side-copy">The neural network was trained from generated examples rather than learning only through trial and error.</p>
+            <p class="section-side-copy">The scripted controller drives first. Its steering and speed commands become the training data.</p>
           </div>
           <div class="ai-pipeline-grid">
             <article><span>01</span><h3>Randomize</h3><p>Spawn the vehicle at different positions and orientations around the parking target.</p></article>
@@ -523,19 +498,19 @@
             <div>
               <p class="kicker">Engineering decision</p>
               <h2>Why not start<br />with reinforcement learning?</h2>
-              <p>Reinforcement learning was considered, but a hand-built controller already knew how the car should behave. Using it as a teacher produced useful training data immediately and made failures much easier to inspect.</p>
+              <p>I already had a scripted controller that could park the car. Using it as a teacher gave me useful data quickly and made mistakes easier to inspect.</p>
             </div>
             <div class="ai-decision-list">
-              <article><strong>More controlled training</strong><p>The quality of each example is known because it comes from a controller with explicit parking rules.</p></article>
-              <article><strong>Faster iteration</strong><p>The dataset can be regenerated after changing the environment, state features or parking strategy.</p></article>
-              <article><strong>Reviewable behavior</strong><p>Inputs, predicted actions, collisions and episode results can be logged and compared directly.</p></article>
-              <article><strong>A path toward RL later</strong><p>The trained network can become a starting policy before later fine-tuning with reinforcement learning.</p></article>
+              <article><strong>Known training examples</strong><p>Each example comes from a controller with clear parking rules.</p></article>
+              <article><strong>Easy to regenerate</strong><p>I can create a new dataset after changing the environment or parking logic.</p></article>
+              <article><strong>Easier debugging</strong><p>Inputs, predictions, collisions and results can be compared directly.</p></article>
+              <article><strong>Reinforcement learning later</strong><p>The trained model could later be used as a starting point for reinforcement learning.</p></article>
             </div>
           </div>
         </section>
 
         <section class="detail-section challenge-section">
-          <div class="detail-section-heading compact"><div><p class="kicker">What I built</p><h2>More than a model.<br />A complete training system.</h2></div></div>
+          <div class="detail-section-heading compact"><div><p class="kicker">What I built</p><h2>Main parts of the project</h2></div></div>
           <div class="challenge-grid">
             <article><span class="challenge-number">01</span><h3>Simulation environment</h3><p>Defined the vehicle, steering joints, obstacles, collision checks, camera behavior and reset logic.</p><strong>Result</strong><p>Repeatable episodes with changing start positions and measurable success conditions.</p></article>
             <article><span class="challenge-number">02</span><h3>Dataset generator</h3><p>Created a scripted controller that approaches the target, aligns the car and records every decision.</p><strong>Result</strong><p>Structured examples containing state features and the correct control action.</p></article>
@@ -556,18 +531,18 @@
         </section>
 
         <section class="detail-section stack-section">
-          <div><p class="kicker">Technology</p><h2>Built from simulation<br />through evaluation.</h2></div>
+          <div><p class="kicker">Technology</p><h2>Tools used</h2></div>
           <div class="stack-cloud" aria-label="AI parking project technologies">
             <span class="large">Python</span><span>PyBullet</span><span class="large">Neural networks</span><span>Supervised learning</span><span>Imitation learning</span><span>Physics simulation</span><span>Data generation</span><span>Vehicle control</span><span>Model evaluation</span>
           </div>
         </section>
 
         <section class="detail-final-cta">
-          <div><p class="kicker">Source code</p><h2>Explore the complete<br />training pipeline.</h2><p>The complete simulation, data-generation pipeline, and model code are available in the repository.</p></div>
-          <a class="detail-final-button magnetic" href="https://github.com/paulszyburski/Driver" target="_blank" rel="noreferrer" data-parking-github-link>GitHub repository <span>↗</span></a>
+          <div><p class="kicker">Source code</p><h2>Code and project files</h2><p>The simulation, data generator and model code are available in the repository.</p></div>
+          <a class="detail-final-button" href="https://github.com/paulszyburski/Driver" target="_blank" rel="noreferrer" data-parking-github-link>Open repository</a>
         </section>
 
-        <footer class="detail-footer"><button type="button" data-close-parking-detail><span>←</span> Return to all projects</button><p>Designed and built by Paweł.</p></footer>
+        <footer class="detail-footer"><button type="button" data-close-parking-detail><span>←</span> Back to projects</button><p>Made by Paweł.</p></footer>
       </main>
     </div>
   </section>
@@ -579,7 +554,7 @@
   <header class="project-detail-nav">
     <div class="project-detail-nav-inner">
       <button class="detail-back-button" type="button" data-close-robotics-detail><span aria-hidden="true">←</span>Back to portfolio</button>
-      <a class="detail-brand" href="#top" data-close-robotics-link aria-label="Paweł portfolio home"><span class="brand-mark">P</span><span>Robotics case study</span></a>
+      <a class="detail-brand" href="#top" data-close-robotics-link aria-label="Paweł portfolio home"><span class="brand-mark">P</span><span>Robot project</span></a>
       <div class="detail-nav-actions">
         <button class="theme-toggle robotics-detail-theme-toggle" type="button" aria-label="Switch color theme"><span class="theme-icon sun">☀</span><span class="theme-icon moon">☾</span></button>
         <span class="detail-progress-pill"><i></i> In development</span>
@@ -596,10 +571,10 @@
             <span class="detail-status"><i></i> Hardware integration</span>
           </div>
           <h1 id="robotics-detail-title">Autonomous<br />Parking Robot</h1>
-          <p class="detail-hero-lead">An in-progress physical robot that transfers the perception and parking ideas from the PyBullet project into a real system with sensors, electronics and motor control.</p>
+          <p class="detail-hero-lead">A physical version of the parking project, using a Raspberry Pi, sensors, electronics and motor control.</p>
           <div class="detail-hero-actions">
-            <button class="primary-button detail-scroll-button magnetic" type="button" data-scroll-detail="robotics-system">Explore the system <span>↓</span></button>
-            <a class="secondary-button" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">My GitHub profile <span>↗</span></a>
+            <button class="primary-button detail-scroll-button" type="button" data-scroll-detail="robotics-system">How it works</button>
+            <a class="secondary-button" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <dl class="detail-meta-grid">
             <div><dt>Compute</dt><dd>Raspberry Pi</dd></div>
@@ -633,7 +608,7 @@
       <section class="detail-section" id="robotics-system">
         <div class="detail-section-heading compact">
           <div><p class="kicker">System flow</p><h2>Sense, calculate<br />and move.</h2></div>
-          <p class="section-side-copy">The build connects perception, geometry and low-level motion into one loop that can eventually park without manual control.</p>
+          <p class="section-side-copy">The goal is to read the surroundings, choose a movement and correct the robot after each step.</p>
         </div>
         <div class="robotics-pipeline-grid">
           <article><span>01</span><h3>Capture</h3><p>Read the camera and distance sensors to observe markings, obstacles and free space.</p></article>
@@ -698,11 +673,11 @@
       </section>
 
       <section class="detail-final-cta robotics-final-cta">
-        <div><p class="kicker">Work in progress</p><h2>The simulation is becoming<br />a real autonomous system.</h2><p>This project is still being developed. New hardware tests and parking milestones will be added as the robot becomes more independent.</p></div>
-        <a class="detail-final-button magnetic" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">Visit my GitHub profile <span>↗</span></a>
+        <div><p class="kicker">Work in progress</p><h2>Still in progress</h2><p>This project is still being developed. I’ll update it as the robot completes more of the parking process on its own.</p></div>
+        <a class="detail-final-button" href="https://github.com/paulszyburski" target="_blank" rel="noreferrer">Open GitHub</a>
       </section>
 
-      <footer class="detail-footer"><button type="button" data-close-robotics-detail><span>←</span> Return to all projects</button><p>Designed and built by Paweł.</p></footer>
+      <footer class="detail-footer"><button type="button" data-close-robotics-detail><span>←</span> Back to projects</button><p>Made by Paweł.</p></footer>
     </main>
   </div>
 </section>
@@ -720,7 +695,7 @@
 
         <a class="detail-brand" href="#top" data-close-reptra-link aria-label="Paweł portfolio home">
           <span class="brand-mark">P</span>
-          <span>App case study</span>
+          <span>Reptra</span>
         </a>
 
         <div class="detail-nav-actions">
@@ -753,10 +728,10 @@
             </p>
 
             <div class="detail-hero-actions">
-              <a class="primary-button magnetic" href="https://play.google.com/store/apps/details?id=com.anonymous.reptra" target="_blank" rel="noreferrer">
-                Open on Google Play <span>↗</span>
+              <a class="primary-button" href="https://play.google.com/store/apps/details?id=com.anonymous.reptra" target="_blank" rel="noreferrer">
+                Google Play
               </a>
-              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="reptra-features">Explore the product <span>↓</span></button>
+              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="reptra-features">See the screens</button>
             </div>
 
             <dl class="detail-meta-grid">
@@ -783,16 +758,16 @@
         </section>
 
         <section class="detail-stats" aria-label="Reptra product overview">
-          <article><strong>05</strong><span>Core product screens</span></article>
-          <article><strong>01</strong><span>Published Android app</span></article>
-          <article><strong>0</strong><span>Unnecessary clutter</span></article>
-          <article><strong>100%</strong><span>Training focused</span></article>
+          <article><strong>5</strong><span>Main screens</span></article>
+          <article><strong>Android</strong><span>Platform</span></article>
+          <article><strong>Live</strong><span>Google Play status</span></article>
+          <article><strong>Solo</strong><span>Project role</span></article>
         </section>
 
         <section class="detail-section detail-intro">
           <div class="detail-section-heading">
             <p class="kicker">The product</p>
-            <h2>Log the workout.<br />See the progress.</h2>
+            <h2>What the app does</h2>
           </div>
           <div class="detail-copy-columns">
             <p>
@@ -814,7 +789,7 @@
               <p class="kicker">Core experience</p>
               <h2>Everything needed<br />for a complete session.</h2>
             </div>
-            <p class="section-side-copy">Each screen has one clear job, so the app stays easy to learn and fast to use.</p>
+            <p class="section-side-copy">The screens are kept simple so logging a workout does not take many taps.</p>
           </div>
 
           <div class="reptra-feature-grid">
@@ -830,7 +805,7 @@
           <div class="reptra-design-card">
             <div class="reptra-design-copy">
               <p class="kicker">Product design</p>
-              <h2>Dark, direct<br />and distraction-free.</h2>
+              <h2>Design choices</h2>
               <p>
                 The design uses high contrast, large touch targets and a small number of strong accent colors.
                 Important workout actions are blue, completed sets are green, and supporting information stays
@@ -849,7 +824,7 @@
           <div class="detail-section-heading compact">
             <div>
               <p class="kicker">Engineering focus</p>
-              <h2>Building a real app<br />means finishing the details.</h2>
+              <h2>What took the most work</h2>
             </div>
           </div>
           <div class="challenge-grid">
@@ -863,7 +838,7 @@
           <div class="detail-section-heading compact">
             <div>
               <p class="kicker">Interface gallery</p>
-              <h2>One visual system.<br />Five focused screens.</h2>
+              <h2>App screenshots</h2>
             </div>
             <p class="section-side-copy">Click any screen to inspect the full-size app screenshot.</p>
           </div>
@@ -898,19 +873,19 @@
           <div>
             <p class="kicker">Try the app</p>
             <h2>Reptra is live<br />on Google Play.</h2>
-            <p>Reptra is available as a published Android app on Google Play.</p>
+            <p>Reptra is published on Google Play.</p>
           </div>
           <div class="reptra-final-actions">
-            <a class="detail-final-button magnetic" href="https://play.google.com/store/apps/details?id=com.anonymous.reptra" target="_blank" rel="noreferrer">
-              Open Google Play <span>↗</span>
+            <a class="detail-final-button" href="https://play.google.com/store/apps/details?id=com.anonymous.reptra" target="_blank" rel="noreferrer">
+              Open Google Play
             </a>
 
           </div>
         </section>
 
         <footer class="detail-footer">
-          <button type="button" data-close-reptra-detail><span>←</span> Return to all projects</button>
-          <p>Designed and built by Paweł.</p>
+          <button type="button" data-close-reptra-detail><span>←</span> Back to projects</button>
+          <p>Made by Paweł.</p>
         </footer>
       </main>
     </div>
@@ -928,7 +903,7 @@
 
         <a class="detail-brand" href="#top" data-close-project-link aria-label="Paweł portfolio home">
           <span class="brand-mark">P</span>
-          <span>Project case study</span>
+          <span>Goldbridge</span>
         </a>
 
         <div class="detail-nav-actions">
@@ -961,10 +936,10 @@
             </p>
 
             <div class="detail-hero-actions">
-              <a class="primary-button magnetic" href="https://github.com/paulszyburski/GoldenBridge" target="_blank" rel="noreferrer" data-github-link>
-                View repository <span>↗</span>
+              <a class="primary-button" href="https://github.com/paulszyburski/GoldenBridge" target="_blank" rel="noreferrer" data-github-link>
+                View code
               </a>
-              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="goldbridge-pipeline">Explore the pipeline <span>↓</span></button>
+              <button class="secondary-button detail-scroll-button" type="button" data-scroll-detail="goldbridge-pipeline">How it works</button>
             </div>
 
             <dl class="detail-meta-grid">
@@ -981,12 +956,12 @@
             <button class="detail-shot-card detail-shot-code" type="button" data-detail-lightbox="code" aria-label="Expand Goldbridge pipeline code screenshot">
               <span class="detail-window-bar"><i></i><i></i><i></i><b>pipeline.py</b></span>
               <img data-detail-shot="code" alt="Goldbridge Python pipeline code open in Visual Studio Code" />
-              <span class="detail-shot-expand">Expand ↗</span>
+              <span class="detail-shot-expand">Open</span>
             </button>
             <button class="detail-shot-card detail-shot-json" type="button" data-detail-lightbox="json" aria-label="Expand Goldbridge clean JSON screenshot">
               <span class="detail-window-bar"><i></i><i></i><i></i><b>validated-data.json</b></span>
               <img data-detail-shot="json" alt="Goldbridge structured JSON output open in Visual Studio Code" />
-              <span class="detail-shot-expand">Expand ↗</span>
+              <span class="detail-shot-expand">Open</span>
             </button>
             <div class="detail-floating-chip chip-python">Python</div>
             <div class="detail-floating-chip chip-json">JSON</div>
@@ -994,16 +969,16 @@
         </section>
 
         <section class="detail-stats" aria-label="Goldbridge project overview">
-          <article><strong>05</strong><span>Clear pipeline stages</span></article>
-          <article><strong>100%</strong><span>Reviewable decisions</span></article>
-          <article><strong>2</strong><span>Raw and structured views</span></article>
-          <article><strong>∞</strong><span>Room to iterate</span></article>
+          <article><strong>5</strong><span>Pipeline stages</span></article>
+          <article><strong>JSON</strong><span>Structured output</span></article>
+          <article><strong>2</strong><span>Source views</span></article>
+          <article><strong>WIP</strong><span>Project status</span></article>
         </section>
 
         <section class="detail-section detail-intro">
           <div class="detail-section-heading">
             <p class="kicker">The idea</p>
-            <h2>Make complex data<br />easy to trust.</h2>
+            <h2>What Goldbridge does</h2>
           </div>
           <div class="detail-copy-columns">
             <p>
@@ -1023,11 +998,10 @@
           <div class="detail-section-heading compact">
             <div>
               <p class="kicker">How it works</p>
-              <h2>From raw records to<br />a useful decision.</h2>
+              <h2>Pipeline steps</h2>
             </div>
             <p class="section-side-copy">
-              Each stage has one clear responsibility, which keeps the system easier to test,
-              inspect and extend.
+              Each step handles one part of the process, which makes the code easier to test and change.
             </p>
           </div>
 
@@ -1069,7 +1043,7 @@
           <div class="architecture-card">
             <div class="architecture-copy">
               <p class="kicker">Backend architecture</p>
-              <h2>Small services.<br />Clear responsibilities.</h2>
+              <h2>Project structure</h2>
               <p>
                 The project is organized as a sequence of focused services instead of one huge
                 script. Extractors, validators, analyzers and report generators can evolve without
@@ -1094,7 +1068,7 @@
           <div class="detail-section-heading compact">
             <div>
               <p class="kicker">Engineering focus</p>
-              <h2>The difficult parts<br />are the useful parts.</h2>
+              <h2>Problems I had to solve</h2>
             </div>
           </div>
 
@@ -1127,7 +1101,7 @@
           <div class="detail-section-heading compact">
             <div>
               <p class="kicker">Inside the project</p>
-              <h2>Code in.<br />Clarity out.</h2>
+              <h2>Project screenshots</h2>
             </div>
             <p class="section-side-copy">Click either image to inspect the original screenshot.</p>
           </div>
@@ -1147,7 +1121,7 @@
         <section class="detail-section stack-section">
           <div>
             <p class="kicker">Technology</p>
-            <h2>Built with a practical<br />backend stack.</h2>
+            <h2>Tools used</h2>
           </div>
           <div class="stack-cloud" aria-label="Goldbridge technologies">
             <span class="large">Python</span>
@@ -1165,19 +1139,19 @@
         <section class="detail-final-cta">
           <div>
             <p class="kicker">Source code</p>
-            <h2>See how Goldbridge<br />is being built.</h2>
-            <p>Explore the extraction, validation, scoring, and reporting pipeline in the public repository.</p>
+            <h2>Code and project files</h2>
+            <p>The extraction, validation, scoring and reporting code is available in the repository.</p>
           </div>
-          <a class="detail-final-button magnetic" href="https://github.com/paulszyburski/GoldenBridge" target="_blank" rel="noreferrer" data-github-link>
+          <a class="detail-final-button" href="https://github.com/paulszyburski/GoldenBridge" target="_blank" rel="noreferrer" data-github-link>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.6.1.8-.2.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg>
-            Open GitHub repository
+            Open repository
             <span>↗</span>
           </a>
         </section>
 
         <footer class="detail-footer">
-          <button type="button" data-close-project-detail><span>←</span> Return to all projects</button>
-          <p>Designed and built by Paweł.</p>
+          <button type="button" data-close-project-detail><span>←</span> Back to projects</button>
+          <p>Made by Paweł.</p>
         </footer>
       </main>
     </div>
@@ -1185,7 +1159,7 @@
 
   <footer class="site-footer section-shell">
     <span>© <span id="year"></span> Paweł</span>
-    <span>Designed & built with curiosity.</span>
+    <span>Made by Paweł.</span>
     <a href="#top">Back to top ↑</a>
   </footer>
 
